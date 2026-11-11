@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+/dts-v1/;
+
+#include "sm8650.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. SM8635";
+	compatible = "qcom,sm8635", "qcom,mtp";
+};
