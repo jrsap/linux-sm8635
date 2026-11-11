@@ -8,3 +8,7 @@
 	model = "Qualcomm Technologies, Inc. SM8635";
 	compatible = "qcom,sm8635", "qcom,mtp";
 };
+
+&gpu {
+	compatible = "qcom,adreno-43030b00", "qcom,adreno";
+};
