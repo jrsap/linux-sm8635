@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+/dts-v1/;
+
+#include "sm8650.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. SM8635";
+	compatible = "qcom,sm8635", "qcom,mtp";
+};
+
+&tlmm {
+	compatible = "qcom,cliffs-pinctrl";
+	reg = <0 0x0f000000 0 0x100000>;
+};
+
+&qupv3_id_0 {
+	uart_g2: serial@a94000 {
+		compatible = "qcom,geni-debug-uart";
+		reg = <0 0x00a94000 0 0x4000>;
+		interrupts = <GIC_SPI 358 IRQ_TYPE_LEVEL_HIGH 0>;
+		clocks = <&gcc GCC_QUPV3_WRAP1_S5_CLK>;
+		clock-names = "se";
+		status = "okay";
+	};
+};
+
+&gpu {
+	compatible = "qcom,adreno-43030b00", "qcom,adreno";
+};

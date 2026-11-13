@@ -1211,6 +1211,11 @@ properties:
 
       - items:
           - enum:
+              - retroidpocket,pocket-g2
+          - const: qcom,sm8635
+
+      - items:
+          - enum:
               - ayaneo,pocket-s2
               - qcom,sm8650-hdk
               - qcom,sm8650-mtp
